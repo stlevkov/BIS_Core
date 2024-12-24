@@ -1,0 +1,10 @@
+## Interface: 30300
+## Title: |cff00ccffSM|r BiS by |ccc00ccccLqlqdum|r
+## Notes: Displays "BIS" text on items in the character window that match your Best in Slot list.
+## Author: github.com/stlevkov/BIS_Core
+## Version: 0.1
+## DefaultState: enabled
+## SavedVariables: MyBISList
+
+display_bis.lua
+shaman.lua
