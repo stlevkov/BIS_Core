@@ -5,6 +5,7 @@
 ## Version: 0.1
 ## DefaultState: enabled
 
+display_util.lua
 display_bis.lua
 display_tooltip.lua
 
