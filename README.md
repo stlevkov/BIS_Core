@@ -21,6 +21,7 @@ The **SM BiS Addon** is a World of Warcraft Classic addon that displays "BIS" (B
            └── AddOns
                └── BIS_Core
                    ├── display_bis.lua
+                   ├── display_tooltip.lua
                    ├── shaman.lua
                    ├── warrior.lua
                    ├── paladin.lua
@@ -32,7 +33,7 @@ The **SM BiS Addon** is a World of Warcraft Classic addon that displays "BIS" (B
 1. Open your character window in-game (`C` by default).
 2. Items in your equipment slots will show:
    - **BIS**: If the item matches your Best in Slot list.
-   - **Pre-BIS**: If the item matches your Pre-BIS list.
+   - **pre**: If the item matches your Pre-BIS list.
 
 ## How It Works
 - The addon determines your class and specialization using the WoW API.
@@ -45,12 +46,12 @@ To add or modify BIS lists:
 1. Open the class-specific Lua file in a text editor (e.g., `shaman.lua`).
 2. Add or edit entries in the `BIS` and `PreBIS` tables using the following format:
    ```lua
-   BIS = {
-       [itemID] = true, -- Description (e.g., Sanctified Frost Witch's Faceguard)
-       ...
+    BIS = {
+        { slot = "HeadSlot", itemID = 51227, source = "Vendor" }, -- Sanctified Ymirjar Lord's Helmet (heroic)
+       ....
    },
    PreBIS = {
-       [itemID] = true, -- Description
+        { slot = "HeadSlot", itemID = 51212, source = "Vendor" }, -- Sanctified Ymirjar Lord's Helmet (normal)
        ...
    }
    ```
@@ -62,7 +63,7 @@ To add or modify BIS lists:
    - Check the game's AddOns menu to verify the addon is enabled.
    - Reload the UI (`/reload`) after making changes.
 
-2. **Error: `attempt to call global 'require' (a nil value)`?**
+2. **Error: `attempt to call global 'something' (a nil value)`?**
    - The addon now uses global variables to load class-specific BIS lists. Ensure the `shaman.lua` and other class files are loaded as part of the addon.
 
 3. **Need help with an issue?**
@@ -71,3 +72,4 @@ To add or modify BIS lists:
 ## Credits
 - **Author**: [Lqlqdum](https://github.com/stlevkov)
 - Inspired by the need for an easy-to-use BIS tracking tool in WoW Classic.
+- Special thanks to [Brandon Sturgeon](https://gist.github.com/brandonsturgeon) for providing the BIS items. Original list can be found here: https://gist.github.com/brandonsturgeon/756ed49463ad8f659a1b760c1a20d441
