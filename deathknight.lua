@@ -58,31 +58,46 @@ BIS_LIST_DEATHKNIGHT = {
         }
     },
     -- Blood Tank Death Knight BIS
-    ["BloodTank"] = {
+    ["Blood"] = {
         BIS = {
-            { slot = "HeadSlot", itemID = 51306, source = "Vendor" }, -- Sanctified Scourgelord Faceguard
+            { slot = "HeadSlot", itemID = 51306, source = "Vendor Heroic Mark" }, -- Sanctified Scourgelord Faceguard
             { slot = "NeckSlot", itemID = 50682, source = "Rotface 25HC" }, -- Bile-Encrusted Medallion
-            { slot = "ShoulderSlot", itemID = 51309, source = "Vendor" }, -- Sanctified Scourgelord Pauldrons
-            { slot = "BackSlot", itemID = 50466, source = "Vendor" }, -- Sentinel's Winter Cloak
-            { slot = "ChestSlot", itemID = 51305, source = "Vendor" }, -- Sanctified Scourgelord Chestguard
-            { slot = "WristSlot", itemID = 51901, source = "Deathbringer Saurfang 25HC" }, -- Gargoyle Spit Bracers
-            { slot = "HandsSlot", itemID = 51307, source = "Vendor" }, -- Sanctified Scourgelord Handguards
-            { slot = "WaistSlot", itemID = 50991, source = "Vendor" }, -- Verdigris Chain Belt
+            { slot = "ShoulderSlot", itemID = 51309, source = "Vendor Heroic Mark" }, -- Sanctified Scourgelord Pauldrons
+            { slot = "BackSlot", itemID = 50466, source = "Vendor Frost Emblem" }, -- Sentinel's Winter Cloak
+            { slot = "ChestSlot", itemID = 51305, source = "Vendor Heroic Mark" }, -- Sanctified Scourgelord Chestguard
+            { slot = "WristSlot", itemID = 50611, source = "Lord Marrowgar 25HC" }, -- Bracers of Dark Reckoning
+            { slot = "HandsSlot", itemID = 51307, source = "Vendor Heroic Mark" }, -- Sanctified Scourgelord Handguards
+            { slot = "WaistSlot", itemID = 50691, source = "Festergut 25HC" }, -- Belt of Broken Bones
             { slot = "LegsSlot", itemID = 50612, source = "Marrowgar 25HC" }, -- Legguards of Lost Hope
             { slot = "FeetSlot", itemID = 54579, source = "Halion 25HC" }, -- Treads of Impending Resurrection
             { slot = "Finger0Slot", itemID = 50622, source = "Valithria Dreamwalker 25HC" }, -- Devium's Eternally Cold Ring
             { slot = "Finger1Slot", itemID = 50404, source = "Vendor" }, -- Ashen Band of Endless Courage
             { slot = "Trinket0Slot", itemID = 54591, source = "Halion 25HC" }, -- Petrified Twilight Scale
             { slot = "Trinket1Slot", itemID = 50364, source = "Sindragosa 25HC" }, -- Sindragosa's Flawless Fang
-            { slot = "Trinket2Slot", itemID = 50344, source = "Professor Putricide 10HC" }, -- Unidentifiable Organ (Alt)
-            { slot = "Trinket3Slot", itemID = 50356, source = "Vendor" }, -- Corroded Skeleton Key (Alt)
-            { slot = "Trinket4Slot", itemID = 50349, source = "Gunship Battle 25HC" }, -- Corpse Tongue Coin (Alt)
             { slot = "MainHandSlot", itemID = 49623, source = "Shadowmourne Questline" }, -- Shadowmourne
-            { slot = "MainHandSlot", itemID = 50730, source = "Lich King 25HC" }, -- Glorenzelg, High-Blade of the Silver Hand (Alt)
-            { slot = "RangedSlot", itemID = 50462, source = "Vendor" } -- Sigil of the Bone Gryphon
+            { slot = "MainHand0Slot", itemID = 50730, source = "Lich King 25HC" }, -- Glorenzelg, High-Blade of the Silver Hand (Alt)
+            { slot = "RangedSlot", itemID = 50462, source = "Vendor Dalaran Frost Emblem" } -- Sigil of the Bone Gryphon
         },
         PreBIS = {
-            -- Add Pre-BIS items here if needed
+            { slot = "HeadSlot", itemID = 51133, source = "Vendor Normal Mark" }, -- Sanctified Scourgelord Faceguard
+            { slot = "NeckSlot", itemID = 50023, source = "Rotface 25" }, -- Bile-Encrusted Medallion
+            { slot = "ShoulderSlot", itemID = 51130, source = "Vendor" }, -- Sanctified Scourgelord Pauldrons
+            { slot = "BackSlot", itemID = 50466, source = "Vendor Normal Mark" }, -- Sentinel's Winter Cloak
+            { slot = "ChestSlot", itemID = 51134, source = "Vendor Normal Mark" }, -- Sanctified Scourgelord Chestguard
+            { slot = "WristSlot", itemID = 51901, source = "Deathbringer Saurfang 10HC" }, -- Gargoyle Spit Bracers
+            { slot = "HandsSlot", itemID = 51132, source = "Vendor Normal Mark" }, -- Sanctified Scourgelord Handguards
+            { slot = "WaistSlot", itemID = 50991, source = "Vendor Frost Emblem" }, -- Verdigris Chain Belt
+            { slot = "LegsSlot", itemID = 49964, source = "Marrowgar 25" }, -- Legguards of Lost Hope
+            { slot = "FeetSlot", itemID = 53129, source = "Halion 25" }, -- Treads of Impending Resurrection
+            { slot = "Finger0Slot", itemID = 50185, source = "Valithria Dreamwalker 25" }, -- Devium's Eternally Cold Ring
+            { slot = "Finger1Slot", itemID = 50404, source = "Vendor ICC" }, -- Ashen Band of Endless Courage
+            { slot = "Trinket0Slot", itemID = 54571, source = "Halion 25" }, -- Petrified Twilight Scale
+            { slot = "Trinket1Slot", itemID = 50361, source = "Sindragosa 25" }, -- Sindragosa's Flawless Fang
+            { slot = "Trinket2Slot", itemID = 50344, source = "Professor Putricide 10HC" }, -- Unidentifiable Organ (Alt)
+            { slot = "Trinket3Slot", itemID = 50356, source = "Vendor" }, -- Corroded Skeleton Key (Alt)
+            { slot = "MainHandSlot", itemID = 50709, source = "Lord Marrowgar 25HC" }, -- Bryntroll, the Bone Arbiter
+            { slot = "MainHand0Slot", itemID = 50070, source = "Lich King 25" }, -- Glorenzelg, High-Blade of the Silver Hand (Alt)
+            { slot = "RangedSlot", itemID = 47672, source = "Vendor Dalaran Triumph Emblem" } -- Sigil of Insolence
         }
     }
 }

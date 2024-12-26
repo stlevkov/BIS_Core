@@ -112,7 +112,7 @@ function GetClassRoleBisCore()
         else
             return "Frost"
         end
-    elseif englishClass == "BIS_LIST_DEATHKNIGHT" then
+    elseif englishClass == "DEATHKNIGHT" then
         if classRole[1] > classRole[2] and classRole[1] > classRole[3] then
             return "Blood"
         elseif classRole[2] > classRole[1] and classRole[2] > classRole[3] then
@@ -121,7 +121,7 @@ function GetClassRoleBisCore()
             return "Unholy"
         end
     else
-        print("BIS will not work for this Class")
+        print("BIS will not work for this Class: " .. englishClass)
     end
 end
 

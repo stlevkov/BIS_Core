@@ -82,7 +82,7 @@ BIS_LIST_PALADIN = {
             { slot = "ShoulderSlot", itemID = 51170, source = "Vendor" }, -- Sanctified Lightsworn Shoulderguards
             { slot = "BackSlot", itemID = 50466, source = "Vendor" }, -- Sentinel's Winter Cloak
             { slot = "ChestSlot", itemID = 51174, source = "Vendor" }, -- Sanctified Lightsworn Chestguard
-            { slot = "WristSlot", itemID = 51901, source = "Deathbringer Saurfang 25HC" }, -- Gargoyle Spit Bracers
+            { slot = "WristSlot", itemID = 51901, source = "Deathbringer Saurfang 10HC" }, -- Gargoyle Spit Bracers
             { slot = "HandsSlot", itemID = 51172, source = "Vendor" }, -- Sanctified Lightsworn Handguards
             { slot = "WaistSlot", itemID = 50991, source = "Vendor" }, -- Verdigris Chain Belt
             { slot = "LegsSlot", itemID = 49904, source = "Crafted" }, -- Pillars of Might
@@ -91,6 +91,8 @@ BIS_LIST_PALADIN = {
             { slot = "Finger1Slot", itemID = 50404, source = "Vendor" }, -- Ashen Band of Endless Courage
             { slot = "Trinket0Slot", itemID = 54571, source = "Halion 25" }, -- Petrified Twilight Scale
             { slot = "Trinket1Slot", itemID = 50361, source = "Sindragosa 25" }, -- Sindragosa's Flawless Fang
+            { slot = "Trinket2Slot", itemID = 50344, source = "Professor Putricide 10HC" }, -- Unidentifiable Organ (Alt)
+            { slot = "Trinket3Slot", itemID = 50356, source = "Vendor" }, -- Corroded Skeleton Key (Alt)
             { slot = "MainHandSlot", itemID = 49997, source = "Lich King 25" }, -- Mithrios, Bronzebeard's Legacy
             { slot = "SecondaryHandSlot", itemID = 50065, source = "Blood Queen Lana'thel 25HC" }, -- Icecrown Glacial Wall
             { slot = "RangedSlot", itemID = 50461, source = "Vendor" } -- Libram of the Eternal Tower
