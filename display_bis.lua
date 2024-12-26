@@ -1,8 +1,10 @@
 -- /dump GetInventoryItemLink("player", 1) (ingame to find the item ID)
 -- /console scriptErrors 1 (to see lua errors) (ingame)
 
+local englishClass = select(2, UnitClass("player"))
+
 -- Function to process the class specialization based on talent points
-function processClassSpecialization()
+local function processClassSpecialization()
     local numTabs = GetNumTalentTabs();
     local talents = { 0, 0, 0 }
 
@@ -20,10 +22,17 @@ end
 
 -- Function to determine the specialization based on talents and class
 local function getClassRole()
-    local englishClass = select(2, UnitClass("player"))
     local classRole = processClassSpecialization()
-    
-    if englishClass == "PALADIN" then
+
+    if englishClass == "ROGUE" then
+        if classRole[3] > classRole[1] and classRole[3] > classRole[2] then
+            return "Subtlety"
+        elseif classRole[2] > classRole[1] and classRole[2] > classRole[3] then
+            return "Assassination"
+        else
+            return "Combat"
+        end
+    elseif englishClass == "PALADIN" then
         if classRole[3] > classRole[1] and classRole[3] > classRole[2] then
             return "Retribution"
         elseif classRole[2] > classRole[1] and classRole[2] > classRole[3] then
@@ -47,34 +56,64 @@ local function getClassRole()
         else
             return "Elemental"
         end
-    else
+    elseif englishClass == "WARLOCK" then
         if classRole[1] > classRole[2] and classRole[1] > classRole[3] then
-            return "Spec1"
+            return "Affliction"
         elseif classRole[2] > classRole[1] and classRole[2] > classRole[3] then
-            return "Spec2"
+            return "Demonology"
         else
-            return "Spec3"
+            return "Destruction"
         end
+    elseif englishClass == "HUNTER" then
+        if classRole[1] > classRole[2] and classRole[1] > classRole[3] then
+            return "Beast Mastery"
+        elseif classRole[2] > classRole[1] and classRole[2] > classRole[3] then
+            return "Marksmanship"
+        else
+            return "Survival"
+        end
+    elseif englishClass == "DRUID" then
+        if classRole[2] > classRole[1] and classRole[2] > classRole[3] then
+            return "Feral"
+        elseif classRole[3] > classRole[1] and classRole[3] > classRole[2] then
+            return "Restoration"
+        else
+            return "Balance"
+        end
+    elseif englishClass == "PRIEST" then
+        if classRole[1] > classRole[2] and classRole[1] > classRole[3] then
+            return "Shadow"
+        elseif classRole[2] > classRole[1] and classRole[2] > classRole[3] then
+            return "Holy"
+        else
+            return "Discipline"
+        end
+    elseif englishClass == "MAGE" then
+        if classRole[1] > classRole[2] and classRole[1] > classRole[3] then
+            return "Arcane"
+        elseif classRole[2] > classRole[1] and classRole[2] > classRole[3] then
+            return "Fire"
+        else
+            return "Frost"
+        end
+    elseif englishClass == "BIS_LIST_DEATHKNIGHT" then
+        if classRole[1] > classRole[2] and classRole[1] > classRole[3] then
+            return "Blood"
+        elseif classRole[2] > classRole[1] and classRole[2] > classRole[3] then
+            return "Frost"
+        else
+            return "Unholy"
+        end
+    else
+        print("BIS will not work for this Class")
     end
 end
 
 -- Function to load the appropriate BIS list based on class and spec
 local function LoadBISListForSpec(specName)
-    local englishClass = select(2, UnitClass("player"))
-    local specBIS = nil
 
-    -- Load the appropriate BIS list based on class
-    if englishClass == "PALADIN" then
-        specBIS = require("paladin") -- Load the Paladin BIS list file
-    elseif englishClass == "SHAMAN" then
-        specBIS = BIS_LIST_SHAMAN
-    elseif englishClass == "WARRIOR" then
-        specBIS = require("warrior") -- Load the Warrior BIS list file
-    -- Add other classes here (e.g., "MAGE", "DRUID", etc.)
-    else
-        return {BIS = {}, PreBIS = {}}
-    end
-    
+    local specBIS = _G["BIS_LIST_" .. englishClass]
+
     if specBIS then
         -- Get BIS and Pre-BIS for the current spec
         local classSpecBIS = specBIS[specName] or {BIS = {}, PreBIS = {}}  -- Default to empty if spec not found
@@ -105,8 +144,6 @@ local function UpdateSlotOverlay(slot, bisOverlay)
     if itemLink then
         local itemId = tonumber(itemLink:match("item:(%d+):"))
 
-        local englishClass = select(2, UnitClass("player"))
-
         -- Get the player's current specialization based on talents
         local specName = getClassRole()
 
@@ -114,10 +151,27 @@ local function UpdateSlotOverlay(slot, bisOverlay)
         local BIS_LIST = LoadBISListForSpec(specName).BIS
         local PRE_BIS_LIST = LoadBISListForSpec(specName).PreBIS
 
-        if BIS_LIST[itemId] then
+        local isBIS, isPreBIS = false, false
+        -- Check if the current item is in the BIS list
+        for _, item in ipairs(BIS_LIST) do
+            if item.itemID == itemId then
+                isBIS = true
+                break
+            end
+        end
+
+        -- Check if the current item is in the Pre-BIS list
+        for _, item in ipairs(PRE_BIS_LIST) do
+            if item.itemID == itemId then
+                isPreBIS = true
+                break
+            end
+        end
+
+        if isBIS then
             bisOverlay:SetText("BIS")
             bisOverlay:Show()
-        elseif PRE_BIS_LIST[itemId] then
+        elseif isPreBIS then
             bisOverlay:SetText("pre")
             bisOverlay:Show()
         else
@@ -127,6 +181,7 @@ local function UpdateSlotOverlay(slot, bisOverlay)
         bisOverlay:Hide()
     end
 end
+
 
 -- Initialize BIS overlays for all slots
 local function InitializeBISOverlays()

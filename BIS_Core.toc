@@ -4,7 +4,17 @@
 ## Author: github.com/stlevkov/BIS_Core
 ## Version: 0.1
 ## DefaultState: enabled
-## SavedVariables: MyBISList
 
 display_bis.lua
+display_tooltip.lua
+
+deathknight.lua
+druid.lua
+hunter.lua
+mage.lua
+paladin.lua
+priest.lua
+rogue.lua
 shaman.lua
+warlock.lua
+warrior.lua

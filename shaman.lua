@@ -2,70 +2,76 @@ BIS_LIST_SHAMAN = {
     -- Restoration Shaman BIS
     ["Restoration"] = {
         BIS = {
-            [51242] = true, -- [HeadSlot]           Sanctified Frost Witch's Faceguard (Heroic Mark) (Vendor)
-            [50724] = true, -- [NeckSlot]           Blood Queen's Crimson Choker (Blood Queen Lana'thel 25HC)
-            [51245] = true, -- [ShoulderSlot]       Sanctified Frost Witch's Spaulders (Heroic Mark) (Vendor)
-            [54583] = true, -- [BackSlot]           Cloak of Burning Dusk (Halion 25HC)
-            [51249] = true, -- [ChestSlot]          Sanctified Frost Witch's Tunic (Heroic Mark) (Vendor)
-            [50687] = true, -- [WristSlot]          Bloodsunder's Bracers (Rotface 25HC)
-            [50703] = true, -- [HandsSlot]          Unclean Surgical Gloves (Festergut 25HC)
-            [54587] = true, -- [WaistSlot]          Split Shape Belt (Halion 25HC)
-            [51246] = true, -- [LegsSlot]           Sanctified Frost Witch's Legguards (Heroic Mark) (Vendor)
-            [50699] = true, -- [FeetSlot]           Plague Scientist's Boots (Festergut 25HC)
-            [50664] = true, -- [RingSlot0]          Ring of Rapid Ascent (Gunship Battle 25HC)
-            [50400] = true, -- [RingSlot1]          Ashen Band of Endless Wisdom (ICC Vendor)
-            [50366] = true, -- [TrinketSlot0]       Althor's Abacus (Gunship Battle 25HC)
-            [54589] = true, -- [TrinketSlot1]       Glowing Twilight Scale (Halion 25HC)
-            [46017] = true, -- [MainHandSlot]       Val'anyr, Hammer of Ancient Kings (Ulduar Quest Line)
-            [50685] = true, -- [MainHandSlot]       Trauma (Rotface 25HC)  (Alternative)
-            [50616] = true, -- [SecondaryHandSlot]  Bulwark of Smouldering Steel (Marrowgar 25HC)
-            [50458] = true, -- [RangedSlot]         Bizuri's Totem of Shattered Ice (Frost Emblem Vendor)
-            -- Add more Restoration BIS items here
+            { slot = "HeadSlot", itemID = 51242, source = "Vendor" }, -- Sanctified Frost Witch's Faceguard (Heroic Mark)
+            { slot = "NeckSlot", itemID = 50724, source = "Blood Queen Lana'thel 25HC" }, -- Blood Queen's Crimson Choker
+            { slot = "ShoulderSlot", itemID = 51245, source = "Vendor" }, -- Sanctified Frost Witch's Spaulders (Heroic Mark)
+            { slot = "BackSlot", itemID = 54583, source = "Halion 25HC" }, -- Cloak of Burning Dusk
+            { slot = "ChestSlot", itemID = 51249, source = "Vendor" }, -- Sanctified Frost Witch's Tunic (Heroic Mark)
+            { slot = "WristSlot", itemID = 50687, source = "Rotface 25HC" }, -- Bloodsunder's Bracers
+            { slot = "HandsSlot", itemID = 50703, source = "Festergut 25HC" }, -- Unclean Surgical Gloves
+            { slot = "WaistSlot", itemID = 54587, source = "Halion 25HC" }, -- Split Shape Belt
+            { slot = "LegsSlot", itemID = 51246, source = "Vendor" }, -- Sanctified Frost Witch's Legguards (Heroic Mark)
+            { slot = "FeetSlot", itemID = 50699, source = "Festergut 25HC" }, -- Plague Scientist's Boots
+            { slot = "Finger0Slot", itemID = 50664, source = "Gunship Battle 25HC" }, -- Ring of Rapid Ascent
+            { slot = "Finger1Slot", itemID = 50400, source = "ICC Vendor" }, -- Ashen Band of Endless Wisdom
+            { slot = "Trinket0Slot", itemID = 50366, source = "Gunship Battle 25HC" }, -- Althor's Abacus
+            { slot = "Trinket1Slot", itemID = 54589, source = "Halion 25HC" }, -- Glowing Twilight Scale
+            { slot = "MainHandSlot", itemID = 46017, source = "Ulduar Quest Line" }, -- Val'anyr, Hammer of Ancient Kings
+            { slot = "SecondaryHandSlot", itemID = 50616, source = "Marrowgar 25HC" }, -- Bulwark of Smouldering Steel
+            { slot = "RangedSlot", itemID = 50458, source = "Frost Emblem Vendor" } -- Bizuri's Totem of Shattered Ice
         },
         PreBIS = {
-            [51192] = true, -- [HeadSlot]           Sanctified Frost Witch's Faceguard (Normal Mark) (Vendor)
-            -- [50724] = true, -- [NeckSlot]           Blood Queen's Crimson Choker (Blood Queen Lana'thel 25HC)
-            [51194] = true, -- [ShoulderSlot]       Sanctified Frost Witch's Spaulders (Normal Mark) (Vendor)
-            -- [54583] = true, -- [BackSlot]           Cloak of Burning Dusk (Halion 25HC)
-            [51190] = true, -- [ChestSlot]          Sanctified Frost Witch's Tunic (Normal Mark) (Vendor)
-            -- [50687] = true, -- [WristSlot]          Bloodsunder's Bracers (Rotface 25HC)
-            [50064] = true, -- [HandsSlot]          Unclean Surgical Gloves (Festergut 25)
-            -- [54587] = true, -- [WaistSlot]          Split Shape Belt (Halion 25HC)
-            -- [51246] = true, -- [LegsSlot]           Sanctified Frost Witch's Legguards (Heroic Mark) (Vendor)
-            -- [50699] = true, -- [FeetSlot]           Plague Scientist's Boots (Festergut 25HC)
-            -- [50664] = true, -- [RingSlot0]          Ring of Rapid Ascent (Gunship Battle 25HC)
-            -- [50400] = true, -- [RingSlot1]          Ashen Band of Endless Wisdom (ICC Vendor)
-            -- [50366] = true, -- [TrinketSlot0]       Althor's Abacus (Gunship Battle 25HC)
-            -- [54589] = true, -- [TrinketSlot1]       Glowing Twilight Scale (Halion 25HC)
-            -- [46017] = true, -- [MainHandSlot]       Val'anyr, Hammer of Ancient Kings (Ulduar Quest Line)
-            -- [50685] = true, -- [MainHandSlot]       Trauma (Rotface 25HC)  (Alternative)
-            -- [50616] = true, -- [SecondaryHandSlot]  Bulwark of Smouldering Steel (Marrowgar 25HC)
-            -- [50458] = true, -- [RangedSlot]         Bizuri's Totem of Shattered Ice (Frost Emblem Vendor)
-            -- Add more Restoration Pre-BIS items here
+            { slot = "HeadSlot", itemID = 51192, source = "Vendor" }, -- Sanctified Frost Witch's Faceguard (Normal Mark)
         }
     },
     -- Enhancement Shaman BIS
     ["Enhancement"] = {
         BIS = {
-            [51243] = true, -- Example Enhancement BIS item 1
-            [50668] = true, -- Example Enhancement BIS item 2
-            -- Add more Enhancement BIS items here
+            { slot = "HeadSlot", itemID = 51242, source = "Vendor" }, -- Sanctified Frost Witch's Faceguard
+            { slot = "NeckSlot", itemID = 50633, source = "Sindragosa 25HC" }, -- Sindragosa's Cruel Claw
+            { slot = "ShoulderSlot", itemID = 51240, source = "Vendor" }, -- Sanctified Frost Witch's Shoulderguards
+            { slot = "BackSlot", itemID = 50653, source = "Gunship Battle 25HC" }, -- Shadowvault Slayer's Cloak
+            { slot = "ChestSlot", itemID = 50689, source = "Festergut 25HC" }, -- Carapace of Forgotten Kings
+            { slot = "WristSlot", itemID = 50655, source = "Gunship Battle 25HC" }, -- Scourge Hunter's Vambraces
+            { slot = "HandsSlot", itemID = 51243, source = "Vendor" }, -- Sanctified Frost Witch's Grips
+            { slot = "WaistSlot", itemID = 50688, source = "Festergut 25HC" }, -- Nerub'ar Stalker's Cord
+            { slot = "LegsSlot", itemID = 51241, source = "Vendor" }, -- Sanctified Frost Witch's War-Kilt
+            { slot = "FeetSlot", itemID = 54577, source = "Halion 25HC" }, -- Returning Footfalls
+            { slot = "Finger0Slot", itemID = 50678, source = "Rotface 25HC" }, -- Seal of Many Mouths
+            { slot = "Finger1Slot", itemID = 50402, source = "ICC Reputation" }, -- Ashen Band of Endless Vengeance
+            { slot = "Trinket0Slot", itemID = 50706, source = "Professor Putricide 25HC" }, -- Tiny Abomination in a Jar
+            { slot = "Trinket1Slot", itemID = 54590, source = "Halion 25HC" }, -- Sharpened Twilight Scale
+            { slot = "MainHandSlot", itemID = 50737, source = "Lich King 25HC" }, -- Havoc's Call, Blade of Lordaeron Kings
+            { slot = "SecondaryHandSlot", itemID = 50737, source = "Lich King 25HC" }, -- Havoc's Call, Blade of Lordaeron Kings
+            { slot = "RangedSlot", itemID = 50463, source = "Vendor" } -- Totem of the Avalanche
         },
         PreBIS = {
-            [50603] = true, -- Example Enhancement Pre-BIS item 1
-            -- Add more Enhancement Pre-BIS items here
+            { slot = "HeadSlot", itemID = 50603, source = "Example Source 3" } -- Example Enhancement Pre-BIS item 1
         }
     },
     -- Elemental Shaman BIS
     ["Elemental"] = {
         BIS = {
-            [51244] = true, -- Example Elemental BIS item 1
-            [50658] = true, -- Example Elemental BIS item 2
-            -- Add more Elemental BIS items here
+            { slot = "HeadSlot", itemID = 51237, source = "Vendor" }, -- Sanctified Frost Witch's Helm
+            { slot = "NeckSlot", itemID = 50724, source = "Blood Queen Lana'thel 25HC" }, -- Blood Queen's Crimson Choker
+            { slot = "ShoulderSlot", itemID = 51235, source = "Vendor" }, -- Sanctified Frost Witch's Shoulderpads
+            { slot = "BackSlot", itemID = 54583, source = "Halion 25HC" }, -- Cloak of Burning Dusk
+            { slot = "ChestSlot", itemID = 51239, source = "Vendor" }, -- Sanctified Frost Witch's Hauberk
+            { slot = "WristSlot", itemID = 54582, source = "Halion 25HC" }, -- Bracers of Fiery Night
+            { slot = "HandsSlot", itemID = 51238, source = "Vendor" }, -- Sanctified Frost Witch's Gloves
+            { slot = "WaistSlot", itemID = 54587, source = "Halion 25HC" }, -- Split Shape Belt
+            { slot = "LegsSlot", itemID = 50694, source = "Festergut 25HC" }, -- Plaguebringer's Stained Pants
+            { slot = "FeetSlot", itemID = 50699, source = "Festergut 25HC" }, -- Plague Scientist's Boots
+            { slot = "Finger0Slot", itemID = 50664, source = "Gunship Battle 25HC" }, -- Ring of Rapid Ascent
+            { slot = "Finger1Slot", itemID = 50398, source = "ICC Vendor" }, -- Ashen Band of Endless Destruction
+            { slot = "Trinket0Slot", itemID = 54588, source = "Halion 25HC" }, -- Charred Twilight Scale
+            { slot = "Trinket1Slot", itemID = 50365, source = "Sindragosa 25HC" }, -- Phylactery of the Nameless Lich
+            { slot = "MainHandSlot", itemID = 50734, source = "Lich King 25HC" }, -- Royal Scepter of Terenas II
+            { slot = "SecondaryHandSlot", itemID = 50616, source = "Marrowgar 25HC" }, -- Bulwark of Smouldering Steel
+            { slot = "RangedSlot", itemID = 50458, source = "Vendor" } -- Bizuri's Totem of Shattered Ice
         },
         PreBIS = {
-            [50799] = true, -- Example Elemental Pre-BIS item 1
-            -- Add more Elemental Pre-BIS items here
+            { slot = "HeadSlot", itemID = 50799, source = "Example Source 6" } -- Example Elemental Pre-BIS item 1
         }
     }
 }
