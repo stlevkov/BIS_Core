@@ -100,7 +100,7 @@ BIS_LIST_DRUID = {
             { slot = "LegsSlot", itemID = 50694, source = "Festergut 25HC" }, -- Plaguebringer's Stained Pants
             { slot = "FeetSlot", itemID = 50699, source = "Festergut 25HC" }, -- Plague Scientist's Boots
             { slot = "Finger0Slot", itemID = 50398, source = "Vendor" }, -- Ashen Band of Endless Destruction
-            { slot = "Finger1Slot", itemID = 50613, source = "Prince Valanar 25HC" }, -- Valanar's Other Signet Ring
+            { slot = "Finger1Slot", itemID = 50714, source = "Prince Valanar 25HC" }, -- Valanar's Other Signet Ring
             { slot = "Trinket0Slot", itemID = 54588, source = "Halion 25HC" }, -- Charred Twilight Scale
             { slot = "Trinket1Slot", itemID = 50365, source = "Sindragosa 25HC" }, -- Phylactery of the Nameless Lich
             { slot = "MainHandSlot", itemID = 50734, source = "Lich King 25HC" }, -- Royal Scepter of Terenas II
