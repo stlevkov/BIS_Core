@@ -98,11 +98,11 @@ function GetClassRoleBisCore()
         end
     elseif englishClass == "PRIEST" then
         if classRole[1] > classRole[2] and classRole[1] > classRole[3] then
-            return "Shadow"
+            return "Discipline"
         elseif classRole[2] > classRole[1] and classRole[2] > classRole[3] then
             return "Holy"
         else
-            return "Discipline"
+            return "Shadow"
         end
     elseif englishClass == "MAGE" then
         if classRole[1] > classRole[2] and classRole[1] > classRole[3] then

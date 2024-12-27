@@ -27,7 +27,7 @@ BIS_LIST_PRIEST = {
     -- Discipline Priest BIS
     ["Discipline"] = {
         BIS = {
-            { slot = "HeadSlot", itemID = 51261, source = "Vendor" }, -- Sanctified Crimson Acolyte Hood
+            { slot = "HeadSlot", itemID = 51261, source = "Vendor Heroic Mark" }, -- Sanctified Crimson Acolyte Hood
             { slot = "NeckSlot", itemID = 50724, source = "Blood Queen Lana'thel 25HC" }, -- Blood Queen's Crimson Choker
             { slot = "ShoulderSlot", itemID = 51264, source = "Vendor" }, -- Sanctified Crimson Acolyte Shoulderpads
             { slot = "BackSlot", itemID = 54583, source = "Halion 25HC" }, -- Cloak of Burning Dusk
@@ -47,7 +47,25 @@ BIS_LIST_PRIEST = {
             { slot = "RangedSlot", itemID = 50684, source = "Rotface 25HC" } -- Corpse-Impaling Spike (Alt)
         },
         PreBIS = {
-            -- Add Pre-BIS items here if needed
+            { slot = "HeadSlot", itemID = 51178, source = "Vendor Normal Mark" }, -- Sanctified Crimson Acolyte Hood
+            { slot = "NeckSlot", itemID = 51178, source = "Blood Queen Lana'thel 25 or Action House" }, -- Blood Queen's Crimson Choker
+            { slot = "ShoulderSlot", itemID = 51175, source = "Vendor Normal Mark" }, -- Sanctified Crimson Acolyte Shoulderpads
+            { slot = "BackSlot", itemID = 53489, source = "Halion 25" }, -- Cloak of Burning Dusk
+            { slot = "ChestSlot", itemID = 51176, source = "Vendor Normal Mark" }, -- Sanctified Crimson Acolyte Robe
+            { slot = "WristSlot", itemID = 53486, source = "Halion 25" }, -- Bracers of Fiery Night
+            { slot = "HandsSlot", itemID = 50176, source = "Prince Valanar 25" }, -- San'layn Ritualist Gloves
+            { slot = "WaistSlot", itemID = 49978, source = "Marrowgar 25" }, -- Crushing Coldwraith Belt
+            { slot = "LegsSlot", itemID = 51177, source = "Vendor Normal Mark" }, -- Sanctified Crimson Acolyte Leggings
+            { slot = "FeetSlot", itemID = 50062, source = "Festergut 25" }, -- Plague Scientist's Boots
+            { slot = "Finger0Slot", itemID = 49990, source = "Lady Deathwhisper 25" }, -- Ring of Maddening Whispers
+            { slot = "Finger1Slot", itemID = 50424, source = "Sindragosa 25" }, -- Memory of Malygos
+            { slot = "Trinket0Slot", itemID = 50359, source = "Gunship Battle 25" }, -- Althor's Abacus
+            { slot = "Trinket1Slot", itemID = 54573, source = "Halion 25" }, -- Glowing Twilight Scale
+            { slot = "MainHandSlot", itemID = 50428, source = "Lich King 25" }, -- Royal Scepter of Terenas II
+            { slot = "MainHand0Slot", itemID = 50685, source = "Rotface 25" }, -- Trauma
+            { slot = "SecondaryHandSlot", itemID = 50173, source = "Prince Valanar 25" }, -- Shadow Silk Spindle
+            { slot = "RangedSlot", itemID = 50472, source = "Valithria Dreamwalker 25 or Action House" }, -- Nightmare Ender
+            { slot = "RangedSlot", itemID = 50033, source = "Rotface 25" } -- Corpse-Impaling Spike (Alt)
         }
     },
     -- Holy Priest BIS

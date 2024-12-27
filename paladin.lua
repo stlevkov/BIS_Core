@@ -13,9 +13,9 @@ BIS_LIST_PALADIN = {
             { slot = "LegsSlot", itemID = 51278, source = "Vendor" }, -- Sanctified Lightsworn Legplates
             { slot = "FeetSlot", itemID = 54578, source = "Halion 25HC" }, -- Apocalypse's Advance
             { slot = "Finger0Slot", itemID = 50402, source = "ICC Reputation" }, -- Ashen Band of Endless Vengeance
-            { slot = "Finger0Slot", itemID = 52572, source = "ICC Reputation" }, -- Ashen Band of Endless Might (Alt)
             { slot = "Finger1Slot", itemID = 54576, source = "Halion 25HC" }, -- Signet of Twilight
-            { slot = "Finger1Slot", itemID = 50693, source = "Festergut 25HC" }, -- Might of Blight (Alt)
+            { slot = "Finger2Slot", itemID = 52572, source = "ICC Reputation" }, -- Ashen Band of Endless Might (Alt)
+            { slot = "Finger3Slot", itemID = 50693, source = "Festergut 25HC" }, -- Might of Blight (Alt)
             { slot = "Trinket0Slot", itemID = 54590, source = "Halion 25HC" }, -- Sharpened Twilight Scale
             { slot = "Trinket1Slot", itemID = 50706, source = "Professor Putricide 25HC" }, -- Tiny Abomination in a Jar
             { slot = "MainHandSlot", itemID = 49623, source = "Shadowmourne Questline" }, -- Shadowmourne
@@ -70,6 +70,7 @@ BIS_LIST_PALADIN = {
             { slot = "FeetSlot", itemID = 54579, source = "Halion 25HC" }, -- Treads of Impending Resurrection
             { slot = "Finger0Slot", itemID = 50622, source = "Valithria Dreamwalker 25HC" }, -- Devium's Eternally Cold Ring
             { slot = "Finger1Slot", itemID = 50404, source = "Vendor" }, -- Ashen Band of Endless Courage
+            { slot = "Finger2Slot", itemID = 50642, source = "Lady Deathwhisper 25HC" }, -- Juggernaut Band (alt as OS)
             { slot = "Trinket0Slot", itemID = 54591, source = "Halion 25HC" }, -- Petrified Twilight Scale
             { slot = "Trinket1Slot", itemID = 50364, source = "Sindragosa 25HC" }, -- Sindragosa's Flawless Fang
             { slot = "MainHandSlot", itemID = 50738, source = "Lich King 25HC" }, -- Mithrios, Bronzebeard's Legacy
@@ -88,7 +89,7 @@ BIS_LIST_PALADIN = {
             { slot = "LegsSlot", itemID = 49904, source = "Crafted" }, -- Pillars of Might
             { slot = "FeetSlot", itemID = 50625, source = "Valithria Dreamwalker 25HC" }, -- Grinning Skull Greatboots
             { slot = "Finger0Slot", itemID = 50185, source = "Valithria Dreamwalker 25" }, -- Devium's Eternally Cold Ring
-            { slot = "Finger1Slot", itemID = 50404, source = "Vendor" }, -- Ashen Band of Endless Courage
+            { slot = "Finger1Slot", itemID = 49985, source = "Lady Deathwhisper 25" }, -- Juggernaut Band
             { slot = "Trinket0Slot", itemID = 54571, source = "Halion 25" }, -- Petrified Twilight Scale
             { slot = "Trinket1Slot", itemID = 50361, source = "Sindragosa 25" }, -- Sindragosa's Flawless Fang
             { slot = "Trinket2Slot", itemID = 50344, source = "Professor Putricide 10HC" }, -- Unidentifiable Organ (Alt)
