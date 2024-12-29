@@ -1,8 +1,26 @@
--- /dump GetInventoryItemLink("player", 1) (ingame to find the item ID)
--- /console scriptErrors 1 (to see lua errors) (ingame)
+-- Function to create a shiny border around a frame
+local function createBorder(frame)
+    -- Ensure the frame is valid
+    if not frame then return end
 
--- Create the overlay text function
-local function CreateOverlay(parent, text)
+    -- Create a texture for the border
+    local border = frame:CreateTexture(nil, "OVERLAY")
+    border:SetTexture("Interface\\Buttons\\UI-ActionButton-Border") -- Shiny texture
+    border:SetBlendMode("ADD") -- Makes it look shiny
+    border:SetSize(70, 70) -- frame size
+    border:SetPoint("CENTER", frame, "CENTER", 0, 0)
+
+    -- Apply a golden color (R, G, B, Alpha)
+    border:SetVertexColor(1, 0.84, 0, 0.6) -- Gold with reduced visibility (0.6 alpha)
+
+    border:Hide() -- Hide by default; show only for BIS items
+
+    return border
+end
+
+
+-- Function to create overlay text
+local function createOverlay(parent, text)
     local overlay = parent:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     overlay:SetText(text)
     overlay:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", 0, 0)
@@ -12,11 +30,15 @@ local function CreateOverlay(parent, text)
     overlay:SetShadowColor(0, 0, 0, 1) -- Black shadow with full opacity
     overlay:Hide()
 
+    -- Add a border
+    local border = createBorder(parent)
+    parent.border = border -- Attach the border to the frame for reference
+
     return overlay
 end
 
--- Function to update the overlay for each slot
-local function UpdateSlotOverlay(slot, bisOverlay)
+-- Function to update the overlay and border for each slot
+local function UpdateSlotOverlay(slot, bisOverlay, border)
     local itemLink = GetInventoryItemLink("player", slot)
 
     if itemLink then
@@ -49,21 +71,23 @@ local function UpdateSlotOverlay(slot, bisOverlay)
         if isBIS then
             bisOverlay:SetText("BIS")
             bisOverlay:Show()
+            if border then border:Show() end
         elseif isPreBIS then
             bisOverlay:SetText("pre")
             bisOverlay:Show()
+            if border then border:Hide() end
         else
             bisOverlay:Hide()
+            if border then border:Hide() end
         end
     else
         bisOverlay:Hide()
+        if border then border:Hide() end
     end
 end
 
-
 -- Initialize BIS overlays for all slots
 local function InitializeBISOverlays()
-
     for _, slotName in pairs({
         "HeadSlot", "NeckSlot", "ShoulderSlot", "BackSlot",
         "ChestSlot", "WristSlot", "HandsSlot", "WaistSlot",
@@ -73,9 +97,9 @@ local function InitializeBISOverlays()
     }) do
         local slotFrame = _G["Character" .. slotName]
         if slotFrame then
-            local bisOverlay = CreateOverlay(slotFrame, "BIS")
+            local bisOverlay = createOverlay(slotFrame, "BIS")
             slotFrame:HookScript("OnShow", function()
-                UpdateSlotOverlay(GetInventorySlotInfo(slotName), bisOverlay)
+                UpdateSlotOverlay(GetInventorySlotInfo(slotName), bisOverlay, slotFrame.border)
             end)
         end
     end
@@ -91,7 +115,7 @@ local function InitializeBISOverlays()
             local slotFrame = _G["Character" .. slotName]
             local bisOverlay = slotFrame and slotFrame:GetFontString()
             if bisOverlay then
-                UpdateSlotOverlay(GetInventorySlotInfo(slotName), bisOverlay)
+                UpdateSlotOverlay(GetInventorySlotInfo(slotName), bisOverlay, slotFrame.border)
             end
         end
     end
