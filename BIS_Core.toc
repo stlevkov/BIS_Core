@@ -4,7 +4,9 @@
 ## Author: github.com/stlevkov/BIS_Core
 ## Version: 0.1
 ## DefaultState: enabled
+## SavedVariablesPerCharacter: BIS_Core_Settings
 
+display_helper.lua
 display_util.lua
 display_bis.lua
 display_tooltip.lua

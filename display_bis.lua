@@ -1,3 +1,4 @@
+
 -- Function to create a shiny border around a frame
 local function createBorder(frame)
     -- Ensure the frame is valid
@@ -41,7 +42,7 @@ end
 local function UpdateSlotOverlay(slot, bisOverlay, border)
     local itemLink = GetInventoryItemLink("player", slot)
 
-    if itemLink then
+    if itemLink and BIS_Core_Settings.active then
         local itemId = tonumber(itemLink:match("item:(%d+):"))
 
         -- Get the player's current specialization based on talents
@@ -126,4 +127,6 @@ local function InitializeBISOverlays()
     f:SetScript("OnEvent", UpdateAllSlots)
 end
 
-InitializeBISOverlays()
+function BISCoreOverlaysInitialize()
+    InitializeBISOverlays()
+end

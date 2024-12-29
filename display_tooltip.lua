@@ -6,6 +6,8 @@ local chatObj = { chatMsgFired = false, currentItem = nil }
 -- Function to add static text with BIS and Pre-BIS item links to the tooltip for the HeadSlot item
 local function AddStaticTextToTooltip(tooltip)
 
+    if BIS_Core_Settings.active == false then return end
+
     -- Get the item link from the tooltip
     local _, itemLink = tooltip:GetItem()
     if not itemLink then
