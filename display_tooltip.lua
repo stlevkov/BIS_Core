@@ -88,6 +88,9 @@ local function AddStaticTextToTooltip(tooltip)
 
     -- Print clickable BIS and Pre-BIS items in chat, one per line
     if not chatObj.chatMsgFired or chatObj.currentItem ~= itemLink then
+
+        if BIS_Core_Settings.chat == false then return end
+
         -- Get BIS and Pre-BIS item links
         local bisItemLink = bisItemID and select(2, GetItemInfo(bisItemID)) or nil
         local preBisItemLink = preBisItemID and select(2, GetItemInfo(preBisItemID)) or nil

@@ -8,12 +8,12 @@ local defaultSettings = {
     active = true,
     overlay = true,
     tooltip = true,
-    chat = true
+    chat = false
 }
 
 -- Command handler function
 local function BIS_CommandHandler(msg)
-    local command, arg = msg:match("^(%S*)%s*(.-)$")
+    local command, arg = msg:match("^(%S+)%s*(.*)$")
     if command == "help" then
         BIS_Print("Available commands:")
         BIS_Print("|cff00ff00/bis status|r - Show the current status of the addon")
@@ -22,8 +22,8 @@ local function BIS_CommandHandler(msg)
         -- BIS_Print("|cff00ff00/bis overlay hide|r - Hide overlays on the character window")
         -- BIS_Print("|cff00ff00/bis tooltip show|r - Enable BIS tooltip additions")
         -- BIS_Print("|cff00ff00/bis tooltip hide|r - Disable BIS tooltip additions")
-        -- BIS_Print("|cff00ff00/bis chat show|r - Enable BIS chat output")
-        -- BIS_Print("|cff00ff00/bis chat hide|r - Disable BIS chat output")
+        BIS_Print("|cff00ff00/bis chat show|r - Enable BIS chat output")
+        BIS_Print("|cff00ff00/bis chat hide|r - Disable BIS chat output")
     elseif command == "toggle" then
         BIS_Core_Settings.active = not BIS_Core_Settings.active
         if BIS_Core_Settings.active then
@@ -34,7 +34,17 @@ local function BIS_CommandHandler(msg)
         BIS_Print("BIS functionality is currently " .. (BIS_Core_Settings.active and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
         -- BIS_Print("Overlays are currently " .. (BIS_Core_Settings.overlay and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
         -- BIS_Print("Tooltips are currently " .. (BIS_Core_Settings.tooltip and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
-        -- BIS_Print("Chat output is currently " .. (BIS_Core_Settings.chat and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
+        BIS_Print("Chat output is currently " .. (BIS_Core_Settings.chat and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
+    elseif command == "chat" then
+        if arg == "show" then
+            BIS_Core_Settings.chat = true
+            BIS_Print("BIS chat output is now |cff00ff00enabled|r")
+        elseif arg == "hide" then
+            BIS_Core_Settings.chat = false
+            BIS_Print("BIS chat output is now |cffff0000disabled|r")
+        else
+            BIS_Print("Unknown chat command. Type |cff00ff00/bis help|r for a list of commands.")
+        end
     else
         BIS_Print("Unknown command. Type |cff00ff00/bis help|r for a list of commands.")
     end
