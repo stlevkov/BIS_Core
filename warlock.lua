@@ -22,7 +22,7 @@ BIS_LIST_WARLOCK = {
             { slot = "RangedSlot", itemID = 50684, source = "Rotface 25HC" } -- Corpse-Impaling Spike
         },
         PreBIS = {
-            { slot = "HeadSlot", itemID = 51231, source = "Vendor Normal Mark" }, -- Sanctified Dark Coven Hood
+            { slot = "HeadSlot", itemID = 51208, source = "Vendor Normal Mark Test" }, -- Sanctified Dark Coven Hood
             { slot = "NeckSlot", itemID = 50005, source = "Gunship 25" }, -- Amulet of the Silent Eulogy
             { slot = "ShoulderSlot", itemID = 51205, source = "Vendor Normal Mark" }, -- Sanctified Dark Coven Shoulderpads
             { slot = "BackSlot", itemID = 53489, source = "Halion 25" }, -- Cloak of Burning Dusk
