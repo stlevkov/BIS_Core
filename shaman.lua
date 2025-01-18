@@ -31,7 +31,8 @@ BIS_LIST_SHAMAN = {
             { slot = "HandsSlot", itemID = 50064, source = "Festergut 25" }, -- Unclean Surgical Gloves
             { slot = "WaistSlot", itemID = 53488, source = "Halion 25" }, -- Split Shape Belt
             { slot = "LegsSlot", itemID = 51193, source = "Vendor Normal Mark" }, -- Sanctified Frost Witch's Legguards
-            { slot = "FeetSlot", itemID = 50062, source = "Festergut 25" }, -- Plague Scientist's Boots
+            { slot = "FeetSlot", itemID = 49896, source = "Leatherworking" }, -- Earthsoul Boots
+            { slot = "FeetSlot1", itemID = 50062, source = "Festergut 25" }, -- Plague Scientist's Boots
             { slot = "Finger0Slot", itemID = 50008, source = "Gunship Battle 25" }, -- Ring of Rapid Ascent
             { slot = "Finger1Slot", itemID = 50400, source = "ICC Vendor" }, -- Ashen Band of Endless Wisdom
             { slot = "Trinket0Slot", itemID = 50359, source = "Gunship Battle 25" }, -- Althor's Abacus
