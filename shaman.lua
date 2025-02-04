@@ -2,7 +2,7 @@ BIS_LIST_SHAMAN = {
     -- Restoration Shaman BIS
     ["Restoration"] = {
         BIS = {
-            { slot = "HeadSlot", itemID = 51242, source = "Vendor" }, -- Sanctified Frost Witch's Faceguard (Heroic Mark)
+            { slot = "HeadSlot", itemID = 51247, source = "Vendor" }, -- Sanctified Frost Witch's Headpiece (Heroic Mark)
             { slot = "NeckSlot", itemID = 50724, source = "Blood Queen Lana'thel 25HC" }, -- Blood Queen's Crimson Choker
             { slot = "ShoulderSlot", itemID = 51245, source = "Vendor" }, -- Sanctified Frost Witch's Spaulders (Heroic Mark)
             { slot = "BackSlot", itemID = 54583, source = "Halion 25HC" }, -- Cloak of Burning Dusk
