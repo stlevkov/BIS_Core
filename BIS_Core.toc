@@ -2,7 +2,7 @@
 ## Title: |cff00ccffSM|r BiS by |ccc00ccccLqlqdum|r
 ## Notes: Displays "BIS" text on items in the character window that match your Best in Slot list.
 ## Author: github.com/stlevkov/BIS_Core
-## Version: 0.1
+## Version: 0.2
 ## DefaultState: enabled
 ## SavedVariablesPerCharacter: BIS_Core_Settings
 
