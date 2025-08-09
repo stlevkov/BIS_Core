@@ -67,7 +67,7 @@ frame:SetScript("OnEvent", function()
     end
 
     -- Print an initialization message
-    print("BIS Core by Lqlqdum loaded! |cff00ccffv0.1|r. Check for new versions at |cff00ccffgithub.com/stlevkov/BIS_Core|r. Type |cff00ff00/bis toggle|r to show/hide or |cff00ff00/bis help|r for more details.")
+    print("BIS Core by Lqlqdum loaded! |cff00ccffv0.2|r. Check for new versions at |cff00ccffgithub.com/stlevkov/BIS_Core|r. Type |cff00ff00/bis toggle|r to show/hide or |cff00ff00/bis help|r for more details.")
 
     print("Checking for BIS Core settings on load to initialize overlays: " .. tostring(BIS_Core_Settings.active))
     -- Initialize BIS overlays if the addon is active on load
