@@ -108,7 +108,8 @@ BIS_LIST_DRUID = {
             { slot = "RangedSlot", itemID = 50457, source = "Vendor" } -- Idol of the Lunar Eclipse
         },
         PreBIS = {
-            { slot = "BackSlot", itemID = 53489, source = "Halion 25" } -- Cloak of Burning Dusk TODO or 50628 (Frostbinder's Shredded Cape)
+            { slot = "BackSlot", itemID = 53489, source = "Halion 25" }, -- Cloak of Burning Dusk
+            { slot = "BackSlot", itemID = 50628, source = "Valithria Dreamwalker 25HC" } -- Frostbinder's Shredded Cape
         }
     }
 }
