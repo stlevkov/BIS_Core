@@ -51,11 +51,7 @@ BIS_LIST_WARRIOR = {
             { slot = "RangedSlot", itemID = 50733, source = "Lich King 25HC" } -- Fal'inrush, Defender of Quel'thalas
         },
         PreBIS = {
-            { slot = "HeadSlot", itemID = 51212, source = "Vendor Normal Mark" }, -- Sanctified Ymirjar Lord's Helmet (Normal)
-            { slot = "HeadSlot", itemID = 50640, source = "Lady Deathwhisper 25HC" }, -- Broken Ram Skull Helm (Alternative)
-            { slot = "NeckSlot", itemID = 50182, source = "Blood Queen Lana'thel 25" }, -- Blood Queen's Crimson Choker (Normal)
-            { slot = "ShoulderSlot", itemID = 51214, source = "Vendor Normal Mark" }, -- Sanctified Ymirjar Lord's Shoulderplates (Normal)
-            { slot = "ShoulderSlot", itemID = 51847, source = "Prince Valandar 10HC" } -- Spaulders of the Blood Princes (Alternative)
+           
         }
     },
     -- Protection Warrior BIS
@@ -83,11 +79,7 @@ BIS_LIST_WARRIOR = {
             { slot = "RangedSlot", itemID = 51834, source = "Valithria Dreamwalker 25HC" } -- Dreamhunter's Carbine
         },
         PreBIS = {
-            { slot = "HeadSlot", itemID = 51205, source = "Vendor Normal Mark" }, -- Sanctified Ymirjar Lord's Breastplate (Normal)
-            { slot = "NeckSlot", itemID = 50182, source = "Blood Queen Lana'thel 25" }, -- Blood Queen's Crimson Choker (Normal)
-            { slot = "NeckSlot", itemID = 50030, source = "Rotface 25" }, -- Bile-Encrusted Medallion (Alternative)
-            { slot = "ShoulderSlot", itemID = 51207, source = "Vendor Normal Mark" }, -- Sanctified Ymirjar Lord's Shoulderguards (Normal)
-            { slot = "BackSlot", itemID = 50466, source = "Vendor" } -- Sentinel's Winter Cloak
+          
         }
     }
 }
