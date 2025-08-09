@@ -65,11 +65,7 @@ BIS_LIST_SHAMAN = {
             { slot = "RangedSlot", itemID = 50463, source = "Vendor" } -- Totem of the Avalanche
         },
         PreBIS = {
-            { slot = "HeadSlot", itemID = 51187, source = "Vendor Normal Mark" }, -- Sanctified Frost Witch's Faceguard (Normal)
-            { slot = "HeadSlot", itemID = 50640, source = "Lady Deathwhisper 25HC" }, -- Broken Ram Skull Helm (Alternative)
-            { slot = "NeckSlot", itemID = 50182, source = "Blood Queen Lana'thel 25" }, -- Blood Queen's Crimson Choker (Normal)
-            { slot = "ShoulderSlot", itemID = 51185, source = "Vendor Normal Mark" }, -- Sanctified Frost Witch's Shoulderguards (Normal)
-            { slot = "ShoulderSlot", itemID = 51847, source = "Prince Valandar 10HC" } -- Spaulders of the Blood Princes (Alternative)
+
         }
     },
     -- Elemental Shaman BIS
