@@ -9,6 +9,7 @@ The **SM BiS Addon** is a World of Warcraft Classic addon that displays "BIS" (B
 - Detects your class and specialization based on talent points.
 - Displays **BIS** or **Pre-BIS** tags on equipped items that match your Best in Slot list.
 - Supports multiple classes and specializations.
+- **NEW**: Alternative Pre-BIS items - specify multiple pre-bis options per slot for player choice.
 - Customizable BIS lists can be edited or extended as needed.
 
 ## Installation
@@ -33,7 +34,11 @@ The **SM BiS Addon** is a World of Warcraft Classic addon that displays "BIS" (B
 1. Open your character window in-game (`C` by default).
 2. Items in your equipment slots will show:
    - **BIS**: If the item matches your Best in Slot list.
-   - **pre**: If the item matches your Pre-BIS list.
+   - **pre**: If the item matches your Pre-BIS list (including alternative pre-bis items).
+3. Hover over equipped items to see tooltips showing:
+   - Single pre-bis: "Pre-BIS: [Item Name]"
+   - Multiple pre-bis: "Pre-BIS: [Main Item] or [Alternative Item]"
+4. Enable chat output with `/bis chat show` to see pre-bis alternatives in chat.
 
 ## How It Works
 - The addon determines your class and specialization using the WoW API.
@@ -56,6 +61,25 @@ To add or modify BIS lists:
    }
    ```
 3. Save the file and reload the UI in-game with `/reload`.
+
+### Alternative Pre-BIS Items (New Feature)
+You can now specify multiple pre-bis items for the same slot to give players alternative options:
+
+```lua
+PreBIS = {
+    { slot = "HeadSlot", itemID = 51212, source = "Vendor Normal Mark" }, -- Main pre-bis option
+    { slot = "HeadSlot", itemID = 50640, source = "Lady Deathwhisper 25HC" }, -- Alternative pre-bis option
+    { slot = "NeckSlot", itemID = 50182, source = "Blood Queen Lana'thel 25" }, -- Single pre-bis (works as before)
+    { slot = "ShoulderSlot", itemID = 51214, source = "Vendor Normal Mark" }, -- Main shoulder option
+    { slot = "ShoulderSlot", itemID = 51847, source = "Prince Valandar 10HC" } -- Alternative shoulder option
+}
+```
+
+**How it works:**
+- **Character Window**: Items will show "pre" overlay if they match any pre-bis item (main or alternative)
+- **Tooltips**: Will display "[Main Item] or [Alternative Item]" when hovering over equipped items
+- **Chat Output**: Will show "Pre-BIS ItemSlot:" for the first item and "Pre-BIS Alt ItemSlot:" for additional items
+- **Backward Compatibility**: Existing single pre-bis items continue to work exactly as before
 
 ## Troubleshooting
 1. **Addon not showing BIS tags?**
