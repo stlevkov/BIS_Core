@@ -53,7 +53,9 @@ local function AddStaticTextToTooltip(tooltip)
     end
 
     -- Get the BIS and Pre-BIS items for the detected slot
-    local bisItemID, preBisItemID, bisSource, preBisSource
+    local bisItemID, bisSource
+    local preBisItems = {} -- Collect all pre-bis items for this slot
+    
     for _, item in ipairs(BIS_LIST) do
         if item.slot == itemSlot then
             bisItemID = item.itemID
@@ -62,11 +64,10 @@ local function AddStaticTextToTooltip(tooltip)
         end
     end
 
+    -- Collect all Pre-BIS items for this slot
     for _, item in ipairs(PRE_BIS_LIST) do
         if item.slot == itemSlot then
-            preBisItemID = item.itemID
-            preBisSource = item.source
-            break
+            table.insert(preBisItems, {itemID = item.itemID, source = item.source})
         end
     end
 
@@ -78,10 +79,18 @@ local function AddStaticTextToTooltip(tooltip)
         tooltip:AddLine("|cff00ff00BIS:|r Item not found", 1, 1, 1)
     end
 
-    -- Add Pre-BIS item to the tooltip
-    if preBisItemID then
-        local preBisItemLink = select(2, GetItemInfo(preBisItemID))
-        tooltip:AddLine("|cff00ff00Pre-BIS:|r " .. (preBisItemLink or "Item not found"), 1, 1, 1)
+    -- Add Pre-BIS items to the tooltip
+    if #preBisItems > 0 then
+        local preBisText = ""
+        for i, preBisItem in ipairs(preBisItems) do
+            local preBisItemLink = select(2, GetItemInfo(preBisItem.itemID))
+            if i == 1 then
+                preBisText = (preBisItemLink or "Item not found")
+            else
+                preBisText = preBisText .. " or " .. (preBisItemLink or "Item not found")
+            end
+        end
+        tooltip:AddLine("|cff00ff00Pre-BIS:|r " .. preBisText, 1, 1, 1)
     else
         tooltip:AddLine("|cff00ff00Pre-BIS:|r Item not found", 1, 1, 1)
     end
@@ -93,7 +102,6 @@ local function AddStaticTextToTooltip(tooltip)
 
         -- Get BIS and Pre-BIS item links
         local bisItemLink = bisItemID and select(2, GetItemInfo(bisItemID)) or nil
-        local preBisItemLink = preBisItemID and select(2, GetItemInfo(preBisItemID)) or nil
 
         -- Print BIS item with itemSlot and source
         if bisItemID then
@@ -102,9 +110,13 @@ local function AddStaticTextToTooltip(tooltip)
             DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00BIS " .. itemSlot .. ":|r Item not declared in the files")
         end
 
-        -- Print Pre-BIS item with itemSlot and source
-        if preBisItemID then
-            DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Pre-BIS " .. itemSlot .. ":|r " .. (preBisItemLink or "Item not found. Please update your addon files") .. " |cff00ff00Source:|r " .. (preBisSource or "Unknown"))
+        -- Print Pre-BIS items with itemSlot and source
+        if #preBisItems > 0 then
+            for i, preBisItem in ipairs(preBisItems) do
+                local preBisItemLink = select(2, GetItemInfo(preBisItem.itemID))
+                local label = (i == 1) and "Pre-BIS " or "Pre-BIS Alt "
+                DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00" .. label .. itemSlot .. ":|r " .. (preBisItemLink or "Item not found. Please update your addon files") .. " |cff00ff00Source:|r " .. (preBisItem.source or "Unknown"))
+            end
         else
             DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Pre-BIS " .. itemSlot .. ":|r Item not declared in the files")
         end
