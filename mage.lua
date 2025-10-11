@@ -25,8 +25,9 @@ BIS_LIST_MAGE = {
             { slot = "HeadSlot", itemID = 51158, source = "Vendor Normal Mark" }, -- Sanctified Bloodmage Hood
             { slot = "NeckSlot", itemID = 50182, source = "Blood Queen Lana'thel 25 or Action House" }, -- Blood Queen's Crimson Choker
             { slot = "ShoulderSlot", itemID = 51155, source = "Vendor Normal Mark" }, -- Sanctified Bloodmage Shoulderpads
+            { slot = "BackSlot", itemID = 50628, source = "Valithria 25HC" }, -- Frostbinder's Shredded Cape
             { slot = "BackSlot", itemID = 53489, source = "Halion 25" }, -- Cloak of Burning Dusk
-            { slot = "ChestSlot", itemID = 50418, source = "Valithria 25" }, -- Robe of the Walking Nightmare
+            { slot = "ChestSlot", itemID = 51156, source = "Vendor" }, -- Sanctified Bloodmage Robe
             { slot = "WristSlot", itemID = 53486, source = "Halion 25" }, -- Bracers of Fiery Night
             { slot = "HandsSlot", itemID = 51159, source = "Vendor Normal Mark" }, -- Sanctified Bloodmage Gloves
             { slot = "WaistSlot", itemID = 49978, source = "Marrowgar 25" }, -- Crushing Coldwraith Belt
